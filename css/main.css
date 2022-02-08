@@ -66,7 +66,8 @@ img {
 }
 
 .myImg {
-    border-radius: 30px;
+    border-radius: 10px;
+    width:max-content
   }
 
   .heading2Xl {
