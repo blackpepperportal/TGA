@@ -194,6 +194,15 @@ img {
     font-size: 26px;
   }
 
+  /* herosection starts here */
+  .my__hero{
+    height: auto;
+  }
+  /* herosection ends here */
+
+  /* roadmap section starts here */
+
+  /* roadmap section ends here */
   
 
 /* tab custom css starts here */
@@ -201,3 +210,9 @@ a.active {
   border-bottom: 5px solid rgb(0, 255, 179);
 }
 /* tab custom css ends here */
+
+@media screen and (min-width: 1280px){
+  .my__hero{
+    height: 85vh !important;
+  }
+}

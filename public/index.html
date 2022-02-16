@@ -13,14 +13,15 @@
   </head>
 
   <body class="bg-black">
-    <div class="bg-blue-900 py-2">
+    <!-- header section starts here -->
+    <div class="bg-[#00098a] py-2 relative z-50">
       <div class="w-4/5 mx-auto">
         <div class="flex justify-between items-center">
           <a class="navbar-brand" href="#">
             <img src="./images/tgaicon.png" alt="" width="80" height="60" />
           </a>
 
-          <ul class="space-x-6">
+          <ul class="hidden lg:block space-x-4">
             <li class="inline-block">
               <a href="#About" class="text-white">About</a>
             </li>
@@ -38,14 +39,62 @@
             </li>
           </ul>
 
-          <a href="" class="bg-yellow-400 text-sm px-2 py-1.5 rounded-md"
-            >JOIN THE DISCORD CHANNEL</a
-          >
+          <div class="flex items-center">
+            <a
+              href=""
+              class="hidden sm:block bg-yellow-400 text-sm px-2 py-1.5 rounded-md"
+              >JOIN THE DISCORD CHANNEL</a
+            >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="lg:hidden h-7 w-7 ml-8 cursor-pointer text-white hamburger"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </div>
         </div>
       </div>
     </div>
+    <!-- header section ends here -->
 
-    <div class="h-[88vh] w-full">
+    <!-- mobile menu section starts here -->
+
+    <div
+      class="bg-blue-800 py-4 absolute -top-96 left-0 right-0 mobilemenu transition-all duration-500"
+    >
+      <div class="w-4/5 mx-auto">
+        <ul class="lg:hidden space-y-4">
+          <li class="">
+            <a href="#About" class="text-white">About</a>
+          </li>
+          <li class="">
+            <a href="#WhoAreGoats" class="text-white">Who are the Goats?</a>
+          </li>
+          <li class="">
+            <a href="#Roadmap" class="text-white">Roadmap</a>
+          </li>
+          <li class="">
+            <a href="#Team" class="text-white">Team</a>
+          </li>
+          <li class="">
+            <a href="#FAQ" class="text-white">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- mobile menu section ends here -->
+
+    <!-- herosection section starts here -->
+    <div class="w-full my__hero">
       <image
         class="h-full w-full object-cover"
         priority
@@ -53,17 +102,22 @@
         alt="The Goat Alliance"
       />
     </div>
+    <!-- hero section ends here -->
 
     <!-- who we are section starts here -->
 
-    <div class="w-4/5 mx-auto pt-16">
-      <p class="text-7xl font-bold text-pink-500 text-center">
+    <div id="About" class="w-4/5 mx-auto pt-16">
+      <p
+        class="text-4xl md:text-5xl lg:text-7xl font-bold text-pink-500 text-center"
+      >
         The Goat Alliance
       </p>
 
-      <div class="grid grid-cols-3 gap-32 mt-20">
-        <div class="col-span-2">
-          <p class="text-4xl text-pink-500 font-bold">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-3 gap-10 lg:gap-32 mt-10 lg:mt-20"
+      >
+        <div class="lg:col-span-3 xl:col-span-2">
+          <p class="text-2xl lg:text-4xl text-pink-500 font-bold">
             Welcome to the GOAT Squad
           </p>
           <p class="font-light text-white text-lg leading-8 mt-3">
@@ -80,14 +134,20 @@
             the Alliance.
           </p>
         </div>
-        <div class="col-span-1 justify-end">
-          <img src="./images/goat1.png" class="rounded-xl" alt="Snow" />
+        <div class="lg:col-span-2 xl:col-span-1 mx-auto lg:mx-0 lg:justify-end">
+          <img
+            src="./images/goat1.png"
+            class="w-60 lg:w-full mx-auto rounded-xl"
+            alt="Snow"
+          />
         </div>
       </div>
 
-      <div class="grid grid-cols-3 gap-32 mt-20">
-        <div class="col-span-2">
-          <p class="text-4xl text-pink-500 font-bold">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-3 gap-10 lg:gap-32 mt-20"
+      >
+        <div class="lg:col-span-3 xl:col-span-2">
+          <p class="text-2xl lg:text-4xl text-pink-500 font-bold">
             Who are The GOAT Alliance?
           </p>
           <p class="font-light text-white text-lg leading-8 mt-3">
@@ -101,8 +161,12 @@
             concierge for any one holding more than 10 GOATs.
           </p>
         </div>
-        <div class="col-span-1 justify-end">
-          <img src="./images/goat1.png" class="rounded-xl" alt="Snow" />
+        <div class="lg:col-span-2 xl:col-span-1 mx-auto lg:mx-0 lg:justify-end">
+          <img
+            src="./images/goat1.png"
+            class="w-60 lg:w-full mx-auto rounded-xl"
+            alt="Snow"
+          />
         </div>
       </div>
     </div>
@@ -113,24 +177,36 @@
 
     <div class="bg-blue-100 mt-10">
       <div class="py-20">
-        <p class="text-6xl font-bold text-gray-800 text-center mb-4">
+        <p
+          class="text-3xl md:text-4xl lg:text-6xl font-bold text-gray-800 text-center mb-4"
+        >
           PRIVATE MINT STARTS AT
         </p>
-        <div class="w-2/6 mx-auto flex items-center justify-between">
+        <div
+          class="w-4/5 md:w-2/3 lg:w-2/6 mx-auto flex items-center justify-between"
+        >
           <div class="text-center">
-            <p class="countdownDays text-5xl font-bold text-pink-500"></p>
+            <p
+              class="countdownDays text-3xl md:text-5xl font-bold text-pink-500"
+            ></p>
             <p class="text-xl font-semibold text-gray-700">Days</p>
           </div>
           <div class="text-center">
-            <p class="countdownHours text-5xl font-bold text-pink-500"></p>
+            <p
+              class="countdownHours text-3xl md:text-5xl font-bold text-pink-500"
+            ></p>
             <p class="text-xl font-semibold text-gray-700">Hours</p>
           </div>
           <div class="text-center">
-            <p class="countdownMinutes text-5xl font-bold text-pink-500"></p>
+            <p
+              class="countdownMinutes text-3xl md:text-5xl font-bold text-pink-500"
+            ></p>
             <p class="text-xl font-semibold text-gray-700">Minutes</p>
           </div>
           <div class="text-center">
-            <p class="countdownSeconds text-5xl font-bold text-pink-500"></p>
+            <p
+              class="countdownSeconds text-3xl md:text-5xl font-bold text-pink-500"
+            ></p>
             <p class="text-xl font-semibold text-gray-700">Seconds</p>
           </div>
         </div>
@@ -141,10 +217,12 @@
 
     <!-- breif section starts here -->
 
-    <div class="w-4/5 mx-auto pt-16">
-      <div class="grid grid-cols-3 gap-32 items-center mt-4">
-        <div class="col-span-2">
-          <p class="text-4xl text-pink-500 font-bold">
+    <div id="WhoAreGoats" class="w-4/5 mx-auto pt-16">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-3 gap-10 lg:gap-32 mt-20"
+      >
+        <div class="lg:col-span-3 xl:col-span-2">
+          <p class="text-2xl lg:text-4xl text-pink-500 font-bold">
             Who are The GOAT Alliance?
           </p>
           <p class="font-light text-white text-lg leading-8 mt-3">
@@ -157,21 +235,29 @@
             utilities.
           </p>
         </div>
-        <div class="col-span-1 justify-end">
-          <img src="./images/goat2.gif" class="rounded-xl" alt="Snow" />
-        </div>
-      </div>
-
-      <div class="grid grid-cols-3 gap-32 items-center mt-20">
-        <div class="col-span-1">
+        <div class="lg:col-span-2 xl:col-span-1 mx-auto lg:mx-0 lg:justify-end">
           <img
-            src="./images/goat3.png"
-            class="rounded-xl h-[22rem] w-full"
+            src="./images/goat2.gif"
+            class="w-60 lg:w-full mx-auto rounded-xl"
             alt="Snow"
           />
         </div>
-        <div class="col-span-2 justify-end">
-          <p class="text-4xl text-pink-500 font-bold">The Golden GOATs</p>
+      </div>
+
+      <div
+        class="grid grid-cols-1 lg:grid-cols-5 xl:grid-cols-3 gap-10 lg:gap-32 mt-20"
+      >
+        <div class="lg:col-span-2 xl:col-span-1 mx-auto lg:mx-0">
+          <img
+            src="./images/goat_club.png"
+            class="h-[17rem] xl:h-[20rem] w-60 lg:w-96 mx-auto rounded-xl"
+            alt="Snow"
+          />
+        </div>
+        <div class="lg:col-span-3 xl:col-span-2 justify-end">
+          <p class="text-2xl lg:text-4xl text-pink-500 font-bold">
+            The Golden GOATs
+          </p>
           <p class="font-light text-white text-lg leading-8 mt-3">
             The Golden GOATs are the rarest NFTs of the GOAT Squad. There will
             only be 11 Golden GOATs. One will be available with every 1000 GOATS
@@ -188,12 +274,16 @@
 
     <!-- roadmap section starts here -->
 
-    <div class="w-4/5 mx-auto pt-16">
-      <p class="text-6xl font-bold uppercase text-pink-500 text-center mb-3">
+    <div id="Roadmap" class="w-4/5 mx-auto pt-16">
+      <p
+        class="text-4xl md:text-5xl lg:text-7xl font-bold text-pink-500 text-center"
+      >
         Roadmaps
       </p>
 
-      <p class="text-lg text-center text-white w-4/6 mx-auto">
+      <p
+        class="text-sm md:text-lg text-center text-white w-full md:w-4/6 mx-auto"
+      >
         As we value our community and its creativity, our roadmap will be
         updated according to your comments and ideas.
       </p>
@@ -206,7 +296,7 @@
         <li class="nav-item flex-auto text-center" role="presentation">
           <a
             href="#tabs-homeFill"
-            class="block font-semibold text-lg leading-tight uppercase py-3 my-2 text-white active no-underline"
+            class="block font-semibold text-base lg:text-lg leading-tight uppercase py-3 my-2 text-white active no-underline"
             id="tabs-home-tabFill"
             data-bs-toggle="pill"
             data-bs-target="#tabs-homeFill"
@@ -240,18 +330,18 @@
           aria-labelledby="tabs-home-tabFill"
         >
           <div class="my-14">
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 0%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   THE CURTAIN RAISING
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   Congratulations, you have been invited to the club preview.
                   Join the community on Discord and participate in a special
                   giveaway where we will launch a pre sale for 1200 Alliance
@@ -261,35 +351,35 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 10%
               </div>
 
-              <div class="">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   LET THE MINT BEGIN
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   10000 GOATS will be released and available to Mint
                   immediately. GOATS will be available to mint at 0.12 ETH
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 25%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   TIME TO GIVE BACK
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   The Alliance, are dedicated to giving back as a community. For
                   that reason, $50,000 will be given to a reputable charity
                   picked by the Alliance members during a vote on Discord. You
@@ -298,18 +388,18 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 35%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   INCORPORATE THE DAO
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   We want to ensure members of our club see the benefits of
                   joining. At this point we will start forming our DAO so that
                   early members can start being involved in the decision making
@@ -317,32 +407,36 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 50%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">GIVEAWAY 1</p>
-                <p class="text-lg text-gray-200">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
+                  GIVEAWAY 1
+                </p>
+                <p class="text-base lg:text-lg text-gray-200">
                   We will hold our first giveaway of a special prize to payback
                   our early Alliance members. 100 Alliance Members will be
                   picked randomly to receive 0.09 ETH each.
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 60%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">MERCHANDISE</p>
-                <p class="text-lg text-gray-200">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
+                  MERCHANDISE
+                </p>
+                <p class="text-base lg:text-lg text-gray-200">
                   Time to launch an exclusive merchandise store where all the
                   Alliance will be able to pick one free hoodie with their GOAT
                   from the collection. Each item will be a 1 of 1. A separate
@@ -351,35 +445,35 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 100%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   WELCOME TO THE ALLIANCE
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   Its time to rock n roll. Welcome to the most exclusive
                   Alliance in the Metaverse where the community is family.
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 100%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   MEMBERSHIP BENEFITS
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   Time to announce the benefits of being part of the Alliance.
                   All Alliance members will find out all the travel, lifestyle
                   and business benefits they unlock. All holders of five or more
@@ -388,16 +482,18 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 100%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">AFTER PARTY</p>
-                <p class="text-lg text-gray-200">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
+                  AFTER PARTY
+                </p>
+                <p class="text-base lg:text-lg text-gray-200">
                   We unlock access to an Exclusive club, to discuss investments,
                   real estates, events , cars , crypto and NFTs, meetings,
                   conferences, social events. We are also organising meet-ups in
@@ -407,34 +503,36 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 100%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   PHASE 2 OF THE ROADMAP ANNOUNCED
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   We will announce the location of TGA Haus as well as a host of
                   other surprises including a membership Dapp and Holders only
                   Website with all your benefits as a member.
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
               <div
-                class="rounded-full h-28 w-28 text-white flex justify-center items-center p-10 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
+                class="h-6 w-6 p-7 rounded-md lg:h-28 lg:w-28 lg:p-10 lg:rounded-full text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-xl"
               >
                 100%
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">FINAL GIVEAWAY</p>
-                <p class="text-lg text-gray-200">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
+                  FINAL GIVEAWAY
+                </p>
+                <p class="text-base lg:text-lg text-gray-200">
                   We will announce the final reveal where the 11 Golden Goat
                   Holders will start earning $1000 each per month. There will
                   also be one lucky prize winner announced one month after mint
@@ -451,18 +549,24 @@
           aria-labelledby="tabs-profile-tabFill"
         >
           <div class="my-14">
-            <div class="flex justify-between items-center mb-8">
-              <div
-                class="rounded-full h-[96px] w-[158px] text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-              >
-              <img src="./images/oUTLINE.png" class="h-[70px] w-[70px] object-cover" alt="">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
+              <div>
+                <div
+                  class="h-10 w-10 p-1 rounded-md lg:h-28 lg:w-28 lg:p-4 lg:rounded-full flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                >
+                  <img
+                    src="./images/oUTLINE.png"
+                    class="h-[70px] w-[70px] object-contain"
+                    alt=""
+                  />
+                </div>
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   EXCLUSIVE MEMBERSHIP CLUB
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   Once we sell out, all of our holders will have access to
                   private business development circles. We will invite well
                   known entrepreneurs to speak to our community and give them
@@ -470,16 +574,22 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
-              <div
-                class="rounded-full h-[96px] w-[164px] text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-              >
-                <img src="./images/oUTLINE.png" class="h-[70px] w-[70px] object-cover" alt="">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
+              <div>
+                <div
+                  class="h-10 w-10 p-1 rounded-md lg:h-28 lg:w-28 lg:p-4 lg:rounded-full flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                >
+                  <img
+                    src="./images/oUTLINE.png"
+                    class="h-[70px] w-[70px] object-contain"
+                    alt=""
+                  />
+                </div>
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">WORLDWIDE EVENT</p>
-                <p class="text-lg text-gray-200">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">WORLDWIDE EVENT</p>
+                <p class="text-base lg:text-lg text-gray-200">
                   The most active holders of our community will be invited to
                   parties around the globe twice a year. Other in person and
                   online events will give members the chance to meet other
@@ -487,50 +597,68 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
-              <div
-                class="rounded-full h-[96px] w-[150px] text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-              >
-                <img src="./images/oUTLINE.png" class="h-[70px] w-[70px] object-cover" alt="">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
+              <div>
+                <div
+                  class="h-10 w-10 p-1 rounded-md lg:h-28 lg:w-28 lg:p-4 lg:rounded-full flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                >
+                  <img
+                    src="./images/oUTLINE.png"
+                    class="h-[70px] w-[70px] object-contain"
+                    alt=""
+                  />
+                </div>
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   HUGE COLLABORATIONS
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   We will set up partnerships with other projects, artists and
                   key opinion leaders. You will get the chance to be part of the
                   creative process behind these future collaborations.
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
-              <div
-                class="rounded-full h-[96px] w-[105px] text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-              >
-                <img src="./images/oUTLINE.png" class="h-[70px] w-[70px] object-cover" alt="">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
+              <div>
+                <div
+                  class="h-10 w-10 p-1 rounded-md lg:h-28 lg:w-28 lg:p-4 lg:rounded-full flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                >
+                  <img
+                    src="./images/oUTLINE.png"
+                    class="h-[70px] w-[70px] object-contain"
+                    alt=""
+                  />
+                </div>
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">TOKENISATION</p>
-                <p class="text-lg text-gray-200">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">TOKENISATION</p>
+                <p class="text-base lg:text-lg text-gray-200">
                   We are working on the ability to merge your NFT’s in order to
                   increase their value and create rare items through
                   tokenisation.
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
-              <div
-                class="rounded-full h-[96px] w-[198px] text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-              >
-                <img src="./images/oUTLINE.png" class="h-[70px] w-[70px] object-cover" alt="">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
+              <div>
+                <div
+                  class="h-10 w-10 p-1 rounded-md lg:h-28 lg:w-28 lg:p-4 lg:rounded-full flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                >
+                  <img
+                    src="./images/oUTLINE.png"
+                    class="h-[70px] w-[70px] object-contain"
+                    alt=""
+                  />
+                </div>
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">DAO INVESTMENT</p>
-                <p class="text-lg text-gray-200">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">DAO INVESTMENT</p>
+                <p class="text-base lg:text-lg text-gray-200">
                   We want all our members to be an active part of the community
                   and show them support. As a community we will pick 30 Alliance
                   members per year and invest in their business in exchange for
@@ -538,16 +666,22 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
-              <div
-                class="rounded-full h-[96px] w-[175px] text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-              >
-                <img src="./images/oUTLINE.png" class="h-[70px] w-[70px] object-cover" alt="">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
+              <div>
+                <div
+                  class="h-10 w-10 p-1 rounded-md lg:h-28 lg:w-28 lg:p-4 lg:rounded-full flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                >
+                  <img
+                    src="./images/oUTLINE.png"
+                    class="h-[70px] w-[70px] object-contain"
+                    alt=""
+                  />
+                </div>
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">ANNUAL REWARDS</p>
-                <p class="text-lg text-gray-200">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">ANNUAL REWARDS</p>
+                <p class="text-base lg:text-lg text-gray-200">
                   Being a part of the Alliance automatically will entitle you to
                   free airdrops. These airdrops can be new NFTs further down the
                   roadmap phase or just tokens. The longer you are a member the
@@ -555,52 +689,70 @@
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
-              <div
-                class="rounded-full h-[96px] w-[160px] text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-              >
-                <img src="./images/oUTLINE.png" class="h-[70px] w-[70px] object-cover" alt="">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
+              <div>
+                <div
+                  class="h-10 w-10 p-1 rounded-md lg:h-28 lg:w-28 lg:p-4 lg:rounded-full flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                >
+                  <img
+                    src="./images/oUTLINE.png"
+                    class="h-[70px] w-[70px] object-contain"
+                    alt=""
+                  />
+                </div>
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   EXPLORE THE METAVERSE
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   As a community we want to explore all avenues to enhance the
                   value of the Alliance. As a DAO we will research and decide
                   the best way forward for building something on the Metaverse.
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
-              <div
-                class="rounded-full h-[96px] w-[140px] text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-              >
-                <img src="./images/oUTLINE.png" class="h-[70px] w-[70px] object-cover" alt="">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
+              <div>
+                <div
+                  class="h-10 w-10 p-1 rounded-md lg:h-28 lg:w-28 lg:p-4 lg:rounded-full flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                >
+                  <img
+                    src="./images/oUTLINE.png"
+                    class="h-[70px] w-[70px] object-contain"
+                    alt=""
+                  />
+                </div>
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">TGA HAUS</p>
-                <p class="text-lg text-gray-200">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">TGA HAUS</p>
+                <p class="text-base lg:text-lg text-gray-200">
                   A Private members club on the metaverse and in real life. A
                   place where you will meet your fellow Alliance members to
                   share ideas, party and any thing else we want to do.
                 </p>
               </div>
             </div>
-            <div class="flex justify-between items-center mb-8">
-              <div
-                class="rounded-full h-[96px] w-[130px] text-white flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-              >
-                <img src="./images/oUTLINE.png" class="h-[70px] w-[70px] object-cover" alt="">
+            <div class="lg:flex lg:justify-between lg:items-center mb-8">
+              <div>
+                <div
+                  class="h-10 w-10 p-1 rounded-md lg:h-28 lg:w-28 lg:p-4 lg:rounded-full flex justify-center items-center bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
+                >
+                  <img
+                    src="./images/oUTLINE.png"
+                    class="h-[70px] w-[70px] object-contain"
+                    alt=""
+                  />
+                </div>
               </div>
 
-              <div class="ml-12">
-                <p class="text-2xl font-bold text-pink-500">
+              <div class="mt-2 lg:mt-0 lg:ml-12">
+                <p class="text-xl lg:text-2xl font-bold text-pink-500">
                   UNLOCK THE BENEFITS
                 </p>
-                <p class="text-lg text-gray-200">
+                <p class="text-base lg:text-lg text-gray-200">
                   Every member of the Alliance will have access to special
                   features. Whether its business, leisure or related we will
                   have benefits for the Alliance globally.
@@ -615,8 +767,10 @@
     <!-- roadmap section ends here -->
 
     <!-- team section starts here -->
-    <div class="w-4/5 mx-auto mt-24">
-      <p class="text-3xl font-bold text-blue-700 text-center mb-3">
+    <div id="Team" class="w-4/5 mx-auto mt-24">
+      <p
+        class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-700 text-center mb-3"
+      >
         OUR <span class="text-red-400">TEAM</span>
       </p>
 
@@ -630,7 +784,9 @@
         >
       </p>
 
-      <div class="grid grid-cols-4 gap-10 mt-14">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-10 mt-14"
+      >
         <div class="rounded-lg">
           <div class="h-60">
             <img
@@ -723,7 +879,9 @@
               alt="BILLY THE KID "
             />
           </div>
-          <p class="text-sm mt-3 text-gray-200">The Techie & Blockchain Expert</p>
+          <p class="text-sm mt-3 text-gray-200">
+            The Techie & Blockchain Expert
+          </p>
           <p class="text-lg font-semibold text-white">LANNER</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -860,8 +1018,10 @@
     <!-- team section ends here -->
 
     <!-- faq section starts here -->
-    <div class="w-4/5 mx-auto mt-24">
-      <p class="text-4xl font-bold text-blue-700 text-center mb-10">
+    <div id="FAQ" class="w-4/5 mx-auto mt-24">
+      <p
+        class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-700 text-center mb-10"
+      >
         FREQUENTLY ASKED <span class="text-red-400">QUESTIONS</span>
       </p>
 
@@ -871,7 +1031,7 @@
         >
           <h2 class="accordion-header mb-0" id="flush-headingOne">
             <button
-              class="accordion-button relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+              class="accordion-button relative flex items-center w-full py-3 md:py-4 px-4 md:px-5 text-sm md:text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseOne"
@@ -887,7 +1047,9 @@
             aria-labelledby="flush-headingOne"
             data-bs-parent="#accordionFlushExample"
           >
-            <div class="accordion-body py-4 px-5 font-light">
+            <div
+              class="accordion-body py-3 md:py-4 px-4 md:px-5 text-sm md:text-base font-light"
+            >
               Once minted, simply connect to your OpenSea account to view your
               NFTs.
             </div>
@@ -898,7 +1060,7 @@
         >
           <h2 class="accordion-header mb-0" id="flush-headingTwo">
             <button
-              class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+              class="accordion-button relative flex items-center w-full py-3 md:py-4 px-4 md:px-5 text-sm md:text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseTwo"
@@ -914,7 +1076,9 @@
             aria-labelledby="flush-headingTwo"
             data-bs-parent="#accordionFlushExample"
           >
-            <div class="accordion-body py-4 px-5 font-light">
+            <div
+              class="accordion-body py-3 md:py-4 px-4 md:px-5 text-sm md:text-base font-light"
+            >
               When you buy a GOAT not only do you have your art piece, you also
               own the commercial licensing rights for it too. You can do
               whatever you like in a legal manner with your art piece as long as
@@ -930,7 +1094,7 @@
         >
           <h2 class="accordion-header mb-0" id="flush-headingThree">
             <button
-              class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+              class="accordion-button relative flex items-center w-full py-3 md:py-4 px-4 md:px-5 text-sm md:text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseThree"
@@ -946,7 +1110,9 @@
             aria-labelledby="flush-headingThree"
             data-bs-parent="#accordionFlushExample"
           >
-            <div class="accordion-body py-4 px-5 font-light">
+            <div
+              class="accordion-body py-3 md:py-4 px-4 md:px-5 text-sm md:text-base font-light"
+            >
               The Metaverse refers to a shared virtual experience where land,
               avatars and names can be bought and sold, often using
               cryptocurrency. The future phases in the GOAT Squads Road map will
@@ -959,7 +1125,7 @@
         >
           <h2 class="accordion-header mb-0" id="flush-headingFour">
             <button
-              class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+              class="accordion-button relative flex items-center w-full py-3 md:py-4 px-4 md:px-5 text-sm md:text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseFour"
@@ -975,7 +1141,9 @@
             aria-labelledby="flush-headingFour"
             data-bs-parent="#accordionFlushExample"
           >
-            <div class="accordion-body py-4 px-5 font-light">
+            <div
+              class="accordion-body py-3 md:py-4 px-4 md:px-5 text-sm md:text-base font-light"
+            >
               The Golden GOATs are the rarest NFTs of the GOAT Squad. There will
               only be 11 Golden GOATs. One will be available with every 1000
               GOATS minted. Holding one of them (by lucky mint or through
@@ -988,7 +1156,7 @@
         >
           <h2 class="accordion-header mb-0" id="flush-headingFive">
             <button
-              class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+              class="accordion-button relative flex items-center w-full py-3 md:py-4 px-4 md:px-5 text-sm md:text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseFive"
@@ -1004,7 +1172,9 @@
             aria-labelledby="flush-headingFive"
             data-bs-parent="#accordionFlushExample"
           >
-            <div class="accordion-body py-4 px-5 font-light">
+            <div
+              class="accordion-body py-3 md:py-4 px-4 md:px-5 text-sm md:text-base font-light"
+            >
               The amount of royalties was fixed at 10% to finance the Goat
               Squads activities for its community. We will organize multiple
               events around the world in order to strengthen the community and
@@ -1021,7 +1191,7 @@
         >
           <h2 class="accordion-header mb-0" id="flush-headingSix">
             <button
-              class="accordion-button collapsed relative flex items-center w-full py-4 px-5 text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
+              class="accordion-button relative flex items-center w-full py-3 md:py-4 px-4 md:px-5 text-sm md:text-base text-gray-800 text-left bg-white border-0 rounded-none transition focus:outline-none"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#flush-collapseSix"
@@ -1037,7 +1207,9 @@
             aria-labelledby="flush-headingSix"
             data-bs-parent="#accordionFlushExample"
           >
-            <div class="accordion-body py-4 px-5 font-light">
+            <div
+              class="accordion-body py-3 md:py-4 px-4 md:px-5 text-sm md:text-base font-light"
+            >
               We chose the GOAT because they are symbolic of independence and
               faith. We want our Alliance to embody these traits. In ancient
               mythology the GOATs have been portrayed with strength and
@@ -1052,12 +1224,27 @@
 
     <!-- footer section starts here -->
 
-    <div class="w-4/5 mx-auto flex justify-between items-center mt-20 mb-28">
+    <div class="lg:hidden text-center mt-6">
+      <p class="font-semibold text-white text-lg mb-4">
+        Come join the Alliance
+      </p>
+      <a
+        href=""
+        class="bg-yellow-400 text-sm md:text-lg px-2 md:px-4 py-2 md:py-3 rounded-md"
+        >JOIN THE DISCORD CHANNEL</a
+      >
+    </div>
+
+    <div
+      class="w-4/5 mx-auto flex justify-between items-center mt-10 lg:mt-20 mb-28"
+    >
       <div>
         <img src="./images/tgaicon.png" class="w-28 rounded-md" alt="" />
       </div>
-      <div class="text-center">
-        <p class="font-semibold text-white text-lg mb-4">Come join the Alliance</p>
+      <div class="hidden lg:block text-center">
+        <p class="font-semibold text-white text-lg mb-4">
+          Come join the Alliance
+        </p>
         <a href="" class="bg-yellow-400 text-lg px-4 py-3 rounded-md"
           >JOIN THE DISCORD CHANNEL</a
         >
@@ -1068,7 +1255,7 @@
             width="24"
             height="20"
             viewBox="0 0 24 20"
-            class="text-red-400 h-12 w-12"
+            class="text-red-400 h-8 w-8 md:h-12 md:w-12"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -1085,7 +1272,7 @@
             xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
-            class="text-red-400 h-12 w-12 ml-6"
+            class="text-red-400 h-8 w-8 md:h-12 md:w-12 ml-6"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -1099,8 +1286,12 @@
             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
           </svg>
         </div>
-        <p class="text-right mt-3 text-white">© 2022 THE GOAT ALLIANCE.</p>
-        <p class="text-right text-white">All rights reserved</p>
+        <p class="text-right text-sm md:text-lg mt-3 text-white">
+          © 2022 THE GOAT ALLIANCE.
+        </p>
+        <p class="text-right text-sm md:text-lg text-white">
+          All rights reserved
+        </p>
       </div>
     </div>
 
@@ -1118,6 +1309,16 @@
           console.error(error);
         });
 
+      // mobile menu script is written here
+
+      const mobilemenu = document.querySelector(".mobilemenu");
+      const hamburger = document.querySelector(".hamburger");
+
+      hamburger.addEventListener("click", () => {
+        mobilemenu.classList.toggle("top-16");
+      });
+
+      // countdown script is written here
       var countDownDate = new Date("Mar 15, 2022 00:00:00").getTime();
 
       var x = setInterval(function () {
