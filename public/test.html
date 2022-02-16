@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
+  <style>
+    #tsparticles {
+      /*   background; */
+      width: 500vh;
+      background-color: #0ab1e9;
+      height: 100%;
+    }
+  </style>
+
+  <body>
+    <div id="tsparticles"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/1.18.11/tsparticles.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+      /* tsParticles.load(@dom-id, @options); */
+      tsParticles.load("tsparticles", {
+        particles: {
+          number: {
+            value: 1000,
+          },
+          color: {
+            value: "random",
+            animation: {
+              enable: true,
+              speed: 40,
+              sync: false,
+            },
+          },
+          shape: {
+            type: "triangle",
+          },
+          size: {
+            value: 5,
+            random: true,
+            animation: {
+              enable: true,
+              speed: 16,
+              minimumValue: 0.1,
+              sync: false,
+            },
+          },
+          links: {
+            enable: true,
+            distance: 100,
+            color: "random",
+            opacity: 0.4,
+            width: 1,
+          },
+          move: {
+            enable: true,
+          },
+        },
+        interactivity: {
+          detectsOn: "canvas",
+          events: {
+            onHover: {
+              enable: true,
+              mode: "repulse",
+            },
+            onClick: {
+              enable: true,
+              mode: "bubble",
+            },
+            resize: true,
+          },
+          modes: {
+            grab: {
+              distance: 400,
+              links: {
+                opacity: 1,
+              },
+            },
+            bubble: {
+              distance: 400,
+              size: 40,
+              duration: 2,
+              opacity: 0.8,
+            },
+            repulse: {
+              distance: 200,
+            },
+            push: {
+              quantity: 4,
+            },
+            remove: {
+              quantity: 2,
+            },
+          },
+        },
+        detectRetina: true,
+      });
+    </script>
+  </body>
+</html>
